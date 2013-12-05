@@ -1,4 +1,4 @@
-version = '1.1'
+version = '1.2'
 series0 = []
 series1 = []
 series2 = []
@@ -103,23 +103,25 @@ def generate_primes5(limit):
 	executions[generate_primes5] = (series5, primes)
 	
 if __name__=="__main__":
+	import sys
+	import os
 	'''
 	Changelog:
 		1.1 - 
-			o output mostra nome do metodo, serie gerada e o resultado dos primos;
-			o ploting agora exibe o nome da funcao;
-			pode passar parametro com o limete de testes;
+			The output shows the method name, generated series and primes result;
+			Plotting shows functio name;			
+			New parameter to use as the test limit number.
 		1.2 -
+			Orders results plot according to iteration quantity;
 			Ordena o plot dos metodos por nro de iteracoes;
-			Passa por parametro funcoes de comparacao (x ^ n; e log (X));
-			Verifica resultados dos arrays de primos entre os metodos;
+			Plot function has comparison functions passed as parameters;
+			Checks results between the methods.
 	'''
-	
-	print 'Prime Numbes Ploting v', version
-	
+	print 'Prime Numbers Plotting v', version
+
 	max_value = 500
 	
-	import sys
+
 	if len(sys.argv) > 1:
 		max_value = int(sys.argv[1])
 	
@@ -147,4 +149,7 @@ if __name__=="__main__":
 	plt.legend(loc="upper left")
 	plt.grid(True)
 	plt.savefig("PrimesResult.png")
+	print '##########################################################'
+	print 'Done!'
+	print 'Now check the output graph at ', os.getcwd() + '/PrimesResult.png'
 	#plt.show()
