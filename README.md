@@ -1,4 +1,4 @@
 PrimeNumbersPlotting
 ====================
 
-Python code for test various prime numbers generator algorithms
+Python code to test various prime numbers generator algorithms
